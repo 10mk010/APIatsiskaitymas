@@ -1,0 +1,85 @@
+*, ::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: beige;
+}
+
+#inputField{
+    margin: 1vw;
+}
+
+#input{
+    padding: 4px 10px;
+    font-size: 20px; 
+    background-color: rgb(240, 240, 240);
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: background-color 0.25s, transform 0.15s;
+}
+#input:hover{
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+#input:focus{
+    outline: none;
+}
+#input:active{
+    transform: scale(0.95);
+}
+
+#search{
+    padding: 4px 10px;
+    font-size: 20px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: background-color 0.25s, transform 0.15s;
+}
+#search:hover{
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+#search:active{
+    transform: scale(0.95);
+}
+
+#outputField{
+    width: 100vw;
+}
+
+.movieCard{
+    width: 20vw;
+    height: 70vh;
+    background-color: aqua;
+    inset: 0;
+    margin: 100px auto;
+    background-color: rgb(200, 220, 200);
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: background-color 0.25s;
+}
+
+.movieCardimg{
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    padding: 10px 10px 0px 10px;
+}
+
+.movieCardtitle{
+    padding: 0px 10px 0px 10px;
+    font-size: 50px;
+}
+
+.movieCardrelease{
+    padding: 0px 15px;
+    font-size: 20px;
+    font-weight: 100;
+}
