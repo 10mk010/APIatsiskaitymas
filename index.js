@@ -8,10 +8,18 @@ const api_key = "39c2bb2b";
 search.addEventListener("click", async (e) => {
     e.preventDefault();
     output.innerHTML = "";
+    if(!input.value){
+        alert("Please input something!");
+        return;
+    };
     let data;
     try{
         const result = await fetch(`http://www.omdbapi.com/?t=${input.value.trim()}&apikey=${api_key}&`);
         data = await result.json();
+        if(data.Response == "False"){
+            alert("Invalid search!");
+            return;
+        }
         console.log(data);
     } catch(err){
         alert("err" + err.message);
@@ -19,7 +27,6 @@ search.addEventListener("click", async (e) => {
     }
     const card = document.createElement("div");
     card.classList.add("movieCard");
-
     const img = document.createElement("img");
     if(data["Poster"] == "N/A"){
         img.src = "https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png?20210521171500"
@@ -40,4 +47,3 @@ search.addEventListener("click", async (e) => {
     output.appendChild(card)
 
 })
-
